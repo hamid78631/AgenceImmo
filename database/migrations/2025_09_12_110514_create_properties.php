@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('surface');
             $table->integer('rooms');
             $table->integer('bedrooms');
-            $table->integer('floors');
+            $table->integer('floor');
             $table->integer('price');
             $table->string('city');
             $table->string('address');
