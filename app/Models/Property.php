@@ -3,7 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\Models\Option ; 
+use Illuminate\Support\Str ; 
 class Property extends Model
 {
     protected $fillable = [
@@ -19,4 +20,12 @@ class Property extends Model
         'price',
         'address'
     ];
+
+    public function options(){
+        return $this->belongsToMany(Option::class);
+    }
+
+    public function getSlug():string {
+        return Str::slug($this->title);
+    }
 }
