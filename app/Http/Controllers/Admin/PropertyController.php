@@ -24,17 +24,18 @@ class PropertyController extends Controller
     public function create()
     {
         $property = new Property();
-        
+
         $property->fill([
-            'surface' => 40 , 
+            'surface' => 40 ,
             'rooms' => 3,
-            'bedrooms' => 1 , 
+            'bedrooms' => 1 ,
             'floor' => 0 ,
             'city' => 'Montpellier',
             'postal_code' => 34000,
             'sold' => false ,
 
         ]);
+
         return view('admin.properties.form' , [
             'property' => $property,
             'options' =>Option::pluck('name', 'id')
@@ -51,15 +52,13 @@ class PropertyController extends Controller
         return to_route('admin.property.index')->with('success' , 'Le bien a bien été enrégistré! ');
     }
 
-    
-
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(Property $property)
     {
         return view('admin.properties.form' , [
-            'property' => $property , 
+            'property' => $property ,
             'options' =>Option::pluck('name' , 'id')
         ]);
     }

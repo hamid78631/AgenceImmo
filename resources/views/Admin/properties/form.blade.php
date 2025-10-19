@@ -17,7 +17,7 @@
       @include('shared.input' , ['class' => 'col' , 'name' => 'surface' , 'value' => $property->surface])
       @include('shared.input' , ['class' => 'col' , 'name' => 'price' , 'label'=>'prix' , 'value' => $property->price])
     </div>
-    
+
     @include('shared.input' , ['type' => 'textarea' , 'name' => 'description' , 'value' => $property->description])
     <div class="row">
     @include('shared.input' , ['class' => 'col' ,'label' => 'Pièces' , 'name' => 'rooms' , 'value' => $property->rooms])
@@ -37,7 +37,7 @@
 
 
     <div>
-        <button class="btn btn-primary"> 
+        <button class="btn btn-primary">
             @if($property->exists)
                 Modifier
             @else

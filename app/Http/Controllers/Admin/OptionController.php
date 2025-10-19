@@ -23,7 +23,6 @@ class OptionController extends Controller
     public function create()
     {
         $option = new Option();
-        
         return view('admin.options.form' , [
             'option' => $option
         ]);
@@ -39,8 +38,6 @@ class OptionController extends Controller
         return to_route('admin.option.index')->with('success' , 'L\'option a bien été enrégistré! ');
     }
 
-    
-
     /**
      * Show the form for editing the specified resource.
     */
@@ -49,6 +46,7 @@ class OptionController extends Controller
         return view('admin.options.form' , [
             'option' => $option
         ]);
+        
     }
 
     /**
