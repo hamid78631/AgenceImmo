@@ -1,46 +1,71 @@
 @extends('admin.admin')
-
-@section('title' ,'Tous nos biens')
+@section('title', 'Options & Équipements')
 
 @section('content')
 
-
-<div class="d-flex justify-content-between align-items-center">
-
-<h1 > @yield('title')</h1>
-
-<a href="{{ route('admin.option.create')}}"class="btn btn-primary"> Ajouter un bien </a>
-
+<div class="page-header">
+    <div>
+        <h1>Options &amp; Équipements</h1>
+        <p style="color:var(--muted); font-size:.85rem; margin-top:.3rem;">
+            {{ $options->total() }} option(s) disponible(s)
+        </p>
+    </div>
+    <a href="{{ route('admin.option.create') }}" class="btn-admin-primary">
+        <i class="fa-solid fa-plus"></i> Ajouter une option
+    </a>
 </div>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Nom</th>
-            <th class="text-end">Actions</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-            @foreach($options as $option)
-                <tr>
-                    <td>{{$option->name}}</td>
-                   
-                    <td >  
-                        <div class="d-flex gap-2 w-100 justify-content-end">
-                            <a href="{{route('admin.option.edit' , $option )}}" class="btn btn-primary">Editer</a>
 
-                            <form action="{{route('admin.option.destroy' , $option)}}" method='post'>
+<div class="admin-table-wrap">
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nom de l'option</th>
+                <th style="text-align:right">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @forelse($options as $option)
+                <tr>
+                    <td style="color:var(--muted); width:60px;">{{ $loop->iteration }}</td>
+                    <td class="td-title">
+                        <span style="background:rgba(201,168,76,.1); border:1px solid rgba(201,168,76,.25); color:var(--gold); font-size:.72rem; letter-spacing:1.5px; text-transform:uppercase; padding:.3rem .8rem; border-radius:2px;">
+                            {{ $option->name }}
+                        </span>
+                    </td>
+                    <td>
+                        <div style="display:flex; gap:.5rem; justify-content:flex-end;">
+                            <a href="{{ route('admin.option.edit', $option) }}"
+                               class="btn-admin-outline">
+                                <i class="fa-solid fa-pen-to-square"></i> Éditer
+                            </a>
+                            <form action="{{ route('admin.option.destroy', $option) }}" method="post"
+                                  onsubmit="return confirm('Supprimer cette option ?')">
                                 @csrf
                                 @method('delete')
-
-                                <button class="btn btn-danger">Supprimer</button>
+                                <button type="submit" class="btn-admin-danger">
+                                    <i class="fa-solid fa-trash"></i> Supprimer
+                                </button>
                             </form>
                         </div>
                     </td>
                 </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <td colspan="3" style="text-align:center; padding:3rem; color:var(--muted);">
+                        <i class="fa-solid fa-tags" style="font-size:2rem; display:block; margin-bottom:.8rem; color:rgba(201,168,76,.2)"></i>
+                        Aucune option enregistrée.
+                    </td>
+                </tr>
+            @endforelse
         </tbody>
-</table>
+    </table>
+</div>
 
-{{ $options->links()}}
+@if($options->hasPages())
+    <div class="d-flex justify-content-center mt-4">
+        {{ $options->links() }}
+    </div>
+@endif
+
 @endsection
