@@ -7,20 +7,20 @@
         min-height: 55vh;
         background:
             radial-gradient(ellipse at 60% 40%, rgba(201,168,76,.08) 0%, transparent 55%),
-            linear-gradient(145deg, #07090f 0%, #0d1626 60%, #152035 100%);
+            linear-gradient(145deg, #ffffff 0%, #f8fafc 60%, #f0f4f8 100%);
         display: flex;
         align-items: flex-end;
         padding-top: 9rem;
         padding-bottom: 3.5rem;
-        border-bottom: 1px solid rgba(201,168,76,.1);
+        border-bottom: 1px solid rgba(201,168,76,.15);
         position: relative;
         overflow: hidden;
     }
     .show-hero-grid {
         position: absolute; inset: 0;
         background-image:
-            linear-gradient(rgba(201,168,76,.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(201,168,76,.03) 1px, transparent 1px);
+            linear-gradient(rgba(201,168,76,.07) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(201,168,76,.07) 1px, transparent 1px);
         background-size: 60px 60px;
         pointer-events: none;
     }
@@ -37,10 +37,11 @@
         font-size: clamp(1.8rem, 4vw, 3.5rem);
         line-height: 1.1;
         margin-bottom: 1rem;
+        color: #1e2235;
     }
     .show-location {
         font-size: .9rem;
-        color: var(--light-gray);
+        color: var(--muted);
     }
     .show-location i { color: var(--gold); margin-right: .4rem; }
 
@@ -73,34 +74,34 @@
     .gallery-section { padding: 3rem 0; }
     .gallery-main {
         height: 400px;
-        background: linear-gradient(135deg, #141f33, #0d1626);
+        background: linear-gradient(135deg, #eef1f6, #e2e8f0);
         border-radius: 4px;
         display: flex; align-items: center; justify-content: center;
         font-size: 5rem;
-        color: rgba(201,168,76,.12);
-        border: 1px solid rgba(201,168,76,.1);
+        color: rgba(201,168,76,.3);
+        border: 1px solid rgba(201,168,76,.15);
     }
     .gallery-thumbs { display: flex; gap: .8rem; margin-top: .8rem; }
     .gallery-thumb {
         flex: 1;
         height: 100px;
-        background: linear-gradient(135deg, #141f33, #0d1626);
+        background: linear-gradient(135deg, #eef1f6, #e2e8f0);
         border-radius: 3px;
         display: flex; align-items: center; justify-content: center;
         font-size: 1.8rem;
-        color: rgba(201,168,76,.1);
-        border: 1px solid rgba(201,168,76,.08);
+        color: rgba(201,168,76,.25);
+        border: 1px solid rgba(201,168,76,.12);
         cursor: pointer;
         transition: border-color .3s;
     }
-    .gallery-thumb:hover { border-color: rgba(201,168,76,.4); }
+    .gallery-thumb:hover { border-color: rgba(201,168,76,.45); }
 
     /* DETAILS */
     .details-section { padding: 4rem 0 5rem; }
 
     .info-block {
-        background: var(--card-bg);
-        border: 1px solid var(--card-border);
+        background: #ffffff;
+        border: 1px solid rgba(201,168,76,.2);
         border-radius: 4px;
         padding: 2rem;
     }
@@ -109,14 +110,14 @@
         font-size: 1.2rem;
         margin-bottom: 1.5rem;
         padding-bottom: .9rem;
-        border-bottom: 1px solid rgba(201,168,76,.1);
-        color: var(--cream);
+        border-bottom: 1px solid rgba(201,168,76,.12);
+        color: #1e2235;
     }
 
     .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
     .spec-item {
-        background: rgba(7,9,15,.6);
-        border: 1px solid rgba(201,168,76,.08);
+        background: #f8fafc;
+        border: 1px solid rgba(201,168,76,.1);
         border-radius: 3px;
         padding: .9rem 1rem;
         display: flex; align-items: center; gap: .8rem;
@@ -131,10 +132,10 @@
         flex-shrink: 0;
     }
     .spec-label { font-size: .65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; display: block; }
-    .spec-value { font-size: .95rem; color: var(--cream); font-weight: 500; display: block; margin-top: .1rem; }
+    .spec-value { font-size: .95rem; color: #1e2235; font-weight: 500; display: block; margin-top: .1rem; }
 
     .desc-text {
-        color: rgba(240,236,227,.75);
+        color: rgba(30,34,53,.75);
         line-height: 1.9;
         font-size: .95rem;
     }
@@ -154,20 +155,20 @@
 
     /* CONTACT CARD */
     .contact-card {
-        background: var(--card-bg);
-        border: 1px solid var(--card-border);
+        background: #ffffff;
+        border: 1px solid rgba(201,168,76,.2);
         border-radius: 4px;
         padding: 2rem;
         position: sticky;
         top: 90px;
     }
-    .contact-card h4 { font-size: 1.3rem; margin-bottom: .5rem; }
+    .contact-card h4 { font-size: 1.3rem; margin-bottom: .5rem; color: #1e2235; }
     .contact-card p { color: var(--muted); font-size: .88rem; margin-bottom: 1.5rem; }
 
     .contact-input {
-        background: rgba(7,9,15,.7);
+        background: #f8fafc;
         border: 1px solid rgba(201,168,76,.2);
-        color: var(--cream);
+        color: #1e2235;
         border-radius: 2px;
         padding: .7rem 1rem;
         width: 100%;
@@ -214,7 +215,7 @@
         font-size: 1.2rem;
         flex-shrink: 0;
     }
-    .agent-name { font-weight: 600; color: var(--cream); font-size: .9rem; }
+    .agent-name { font-weight: 600; color: #1e2235; font-size: .9rem; }
     .agent-title { font-size: .72rem; color: var(--muted); }
 </style>
 @endsection
@@ -228,7 +229,7 @@
         <div class="show-breadcrumb" data-aos="fade-up">
             <a href="/">Accueil</a> &nbsp;/&nbsp;
             <a href="{{ route('property.index') }}">Nos Biens</a> &nbsp;/&nbsp;
-            <span style="color:var(--cream)">{{ Str::limit($property->title, 40) }}</span>
+            <span style="color:#1e2235">{{ Str::limit($property->title, 40) }}</span>
         </div>
 
         <div class="row align-items-end g-4">

@@ -17,12 +17,12 @@
         :root {
             --gold:       #c9a84c;
             --gold-light: #e8c97a;
-            --gold-dim:   rgba(201,168,76,0.12);
-            --dark:       #07090f;
-            --navy:       #0d1626;
-            --card-bg:    #101622;
-            --card-border:rgba(201,168,76,0.12);
-            --cream:      #f0ece3;
+            --gold-dim:   rgba(201,168,76,0.1);
+            --dark:       #1a1a2e;
+            --navy:       #f0f4f8;
+            --card-bg:    #ffffff;
+            --card-border:rgba(201,168,76,0.2);
+            --cream:      #1e2235;
             --muted:      #6b7280;
             --light-gray: #9ca3af;
         }
@@ -33,8 +33,8 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: var(--dark);
-            color: var(--cream);
+            background: #f8fafc;
+            color: #1e2235;
             overflow-x: hidden;
             line-height: 1.7;
         }
@@ -42,7 +42,7 @@
         h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', serif; }
 
         ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: var(--dark); }
+        ::-webkit-scrollbar-track { background: #f0f0f0; }
         ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
 
         /* ───── NAVBAR ───── */
@@ -54,14 +54,17 @@
             align-items: center;
             justify-content: space-between;
             padding: 1.6rem 3rem;
+            background: rgba(255,255,255,.92);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(201,168,76,.12);
             transition: all .4s ease;
         }
         #mainNav.scrolled {
-            background: rgba(7,9,15,.92);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
+            background: rgba(255,255,255,.98);
             padding: 1rem 3rem;
-            border-bottom: 1px solid rgba(201,168,76,.15);
+            border-bottom: 1px solid rgba(201,168,76,.2);
+            box-shadow: 0 2px 20px rgba(0,0,0,.06);
         }
 
         .nav-brand {
@@ -78,7 +81,7 @@
         .nav-links { display: flex; align-items: center; gap: .5rem; }
 
         .nav-links a {
-            color: rgba(240,236,227,.75);
+            color: rgba(30,34,53,.65);
             font-size: .78rem;
             letter-spacing: 1.8px;
             text-transform: uppercase;
@@ -110,7 +113,7 @@
             margin-left: .5rem;
             transition: background .3s, color .3s !important;
         }
-        .btn-nav-admin:hover { background: var(--gold); color: var(--dark) !important; }
+        .btn-nav-admin:hover { background: var(--gold); color: #fff !important; }
         .btn-nav-admin::after { display: none !important; }
 
         /* ───── GLOBAL BUTTONS ───── */
@@ -175,7 +178,7 @@
         }
         .section-title {
             font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-            color: var(--cream);
+            color: #1e2235;
             line-height: 1.15;
         }
 
@@ -192,12 +195,12 @@
         }
         .prop-card:hover {
             transform: translateY(-10px);
-            border-color: rgba(201,168,76,.45);
-            box-shadow: 0 25px 60px rgba(0,0,0,.55);
+            border-color: rgba(201,168,76,.5);
+            box-shadow: 0 25px 60px rgba(0,0,0,.1);
         }
         .prop-card-img {
             height: 200px;
-            background: linear-gradient(135deg, #141f33, #0d1626);
+            background: linear-gradient(135deg, #eef1f6, #e2e8f0);
             position: relative;
             display: flex; align-items: center; justify-content: center;
             overflow: hidden;
@@ -205,11 +208,11 @@
         .prop-card-img::after {
             content: '';
             position: absolute; inset: 0;
-            background: linear-gradient(to bottom, transparent 50%, rgba(7,9,15,.6) 100%);
+            background: linear-gradient(to bottom, transparent 50%, rgba(248,250,252,.5) 100%);
         }
         .prop-card-img i {
             font-size: 3.5rem;
-            color: rgba(201,168,76,.14);
+            color: rgba(201,168,76,.3);
         }
         .prop-badge {
             position: absolute;
@@ -255,7 +258,7 @@
             line-height: 1.3;
             flex: 1;
         }
-        .prop-title a { color: var(--cream); text-decoration: none; transition: color .3s; }
+        .prop-title a { color: #1e2235; text-decoration: none; transition: color .3s; }
         .prop-title a:hover { color: var(--gold); }
         .prop-specs {
             display: flex; gap: 1rem;
@@ -290,19 +293,19 @@
 
         /* ───── PAGINATION ───── */
         .pagination .page-link {
-            background: var(--card-bg);
-            border-color: var(--card-border);
-            color: var(--cream);
+            background: #ffffff;
+            border-color: rgba(201,168,76,.25);
+            color: #1e2235;
             padding: .55rem 1rem;
             transition: background .25s, color .25s;
         }
-        .pagination .page-link:hover { background: var(--gold); color: var(--dark); border-color: var(--gold); }
-        .pagination .page-item.active .page-link { background: var(--gold); border-color: var(--gold); color: var(--dark); }
+        .pagination .page-link:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
+        .pagination .page-item.active .page-link { background: var(--gold); border-color: var(--gold); color: #fff; }
 
         /* ───── FOOTER ───── */
         .site-footer {
-            background: #050710;
-            border-top: 1px solid rgba(201,168,76,.14);
+            background: #f0f4f8;
+            border-top: 1px solid rgba(201,168,76,.18);
             padding: 5rem 0 2rem;
             margin-top: 7rem;
         }
@@ -324,7 +327,7 @@
             font-family: 'Inter', sans-serif;
         }
         .site-footer a {
-            color: var(--light-gray);
+            color: var(--muted);
             text-decoration: none;
             font-size: .88rem;
             display: block;
@@ -332,7 +335,7 @@
             transition: color .3s;
         }
         .site-footer a:hover { color: var(--gold); }
-        .f-divider { border-color: rgba(201,168,76,.12); margin: 2rem 0 1.5rem; }
+        .f-divider { border-color: rgba(201,168,76,.15); margin: 2rem 0 1.5rem; }
         .f-copy { color: var(--muted); font-size: .78rem; }
     </style>
 
@@ -375,8 +378,8 @@
             </div>
             <div class="col-lg-3 col-6">
                 <h6>Horaires</h6>
-                <p class="mb-2">Lundi – Vendredi<br><strong style="color:var(--cream)">9h00 – 19h00</strong></p>
-                <p>Samedi<br><strong style="color:var(--cream)">10h00 – 17h00</strong></p>
+                <p class="mb-2">Lundi – Vendredi<br><strong style="color:#1e2235">9h00 – 19h00</strong></p>
+                <p>Samedi<br><strong style="color:#1e2235">10h00 – 17h00</strong></p>
             </div>
         </div>
         <hr class="f-divider">

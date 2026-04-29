@@ -7,20 +7,21 @@
         padding: 10rem 0 4rem;
         background:
             radial-gradient(ellipse at 50% 0%, rgba(201,168,76,.07) 0%, transparent 60%),
-            linear-gradient(180deg, #0d1626 0%, #07090f 100%);
-        border-bottom: 1px solid rgba(201,168,76,.1);
+            linear-gradient(180deg, #f8fafc 0%, #f0f4f8 100%);
+        border-bottom: 1px solid rgba(201,168,76,.15);
         text-align: center;
     }
     .search-hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); }
 
     .search-form-wrap {
-        background: rgba(13,22,38,.8);
-        border: 1px solid rgba(201,168,76,.15);
+        background: rgba(255,255,255,.85);
+        border: 1px solid rgba(201,168,76,.2);
         border-radius: 4px;
         padding: 2rem;
         backdrop-filter: blur(12px);
         max-width: 860px;
         margin: 2.5rem auto 0;
+        box-shadow: 0 4px 24px rgba(0,0,0,.06);
     }
 
     .search-field label {
@@ -32,9 +33,9 @@
         display: block;
     }
     .search-field input {
-        background: rgba(7,9,15,.7);
+        background: #f8fafc;
         border: 1px solid rgba(201,168,76,.2);
-        color: var(--cream);
+        color: #1e2235;
         border-radius: 2px;
         padding: .7rem 1rem;
         width: 100%;
@@ -98,7 +99,7 @@
         font-size: 2rem;
         color: var(--gold);
     }
-    .empty-state h4 { font-size: 1.3rem; color: var(--cream); margin-bottom: .5rem; }
+    .empty-state h4 { font-size: 1.3rem; color: #1e2235; margin-bottom: .5rem; }
     .empty-state p { color: var(--muted); font-size: .9rem; }
 </style>
 @endsection

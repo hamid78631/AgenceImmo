@@ -18,11 +18,11 @@
         :root {
             --gold:        #c9a84c;
             --gold-light:  #e8c97a;
-            --sidebar-bg:  #070b14;
-            --content-bg:  #0a0e1a;
-            --card-bg:     #0f1525;
-            --card-border: rgba(201,168,76,.12);
-            --cream:       #f0ece3;
+            --sidebar-bg:  #ffffff;
+            --content-bg:  #f0f4f8;
+            --card-bg:     #ffffff;
+            --card-border: rgba(201,168,76,.2);
+            --cream:       #1e2235;
             --muted:       #6b7280;
             --light-gray:  #9ca3af;
             --danger:      #ef4444;
@@ -33,13 +33,13 @@
         body {
             font-family: 'Inter', sans-serif;
             background: var(--content-bg);
-            color: var(--cream);
+            color: #1e2235;
             display: flex;
             min-height: 100vh;
         }
         h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', serif; }
         ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: var(--sidebar-bg); }
+        ::-webkit-scrollbar-track { background: #f0f0f0; }
         ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
 
         /* ── SIDEBAR ── */
@@ -47,7 +47,7 @@
             width: 260px;
             min-width: 260px;
             background: var(--sidebar-bg);
-            border-right: 1px solid rgba(201,168,76,.1);
+            border-right: 1px solid rgba(201,168,76,.18);
             display: flex;
             flex-direction: column;
             position: fixed;
@@ -69,7 +69,7 @@
             letter-spacing: 2px;
             text-transform: uppercase;
         }
-        .sidebar-brand a span { color: var(--cream); }
+        .sidebar-brand a span { color: #1e2235; }
         .sidebar-badge {
             font-size: .58rem;
             letter-spacing: 2px;
@@ -97,7 +97,7 @@
             gap: .85rem;
             padding: .7rem .9rem;
             border-radius: 3px;
-            color: rgba(240,236,227,.6);
+            color: rgba(30,34,53,.6);
             text-decoration: none;
             font-size: .85rem;
             font-weight: 500;
@@ -118,7 +118,7 @@
         .sidebar-link:hover,
         .sidebar-link.active {
             background: rgba(201,168,76,.08);
-            color: var(--cream);
+            color: #1e2235;
         }
         .sidebar-link:hover .sl-icon,
         .sidebar-link.active .sl-icon {
@@ -137,7 +137,7 @@
         .sidebar-footer {
             margin-top: auto;
             padding: 1.5rem 1.2rem;
-            border-top: 1px solid rgba(201,168,76,.08);
+            border-top: 1px solid rgba(201,168,76,.12);
         }
         .sidebar-footer a {
             display: flex; align-items: center; gap: .7rem;
@@ -172,7 +172,7 @@
         .topbar-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.25rem;
-            color: var(--cream);
+            color: #1e2235;
         }
 
         .topbar-right { display: flex; align-items: center; gap: 1rem; }
@@ -185,7 +185,7 @@
             border-radius: 50%;
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
             display: flex; align-items: center; justify-content: center;
-            color: var(--sidebar-bg);
+            color: #fff;
             font-size: .9rem;
             font-weight: 700;
         }
@@ -198,9 +198,9 @@
 
         /* ── ALERTS ── */
         .alert-success-custom {
-            background: rgba(34,197,94,.1);
-            border: 1px solid rgba(34,197,94,.25);
-            color: #4ade80;
+            background: rgba(34,197,94,.08);
+            border: 1px solid rgba(34,197,94,.3);
+            color: #16a34a;
             border-radius: 3px;
             padding: .9rem 1.2rem;
             margin-bottom: 1.5rem;
@@ -208,9 +208,9 @@
             font-size: .88rem;
         }
         .alert-danger-custom {
-            background: rgba(239,68,68,.1);
-            border: 1px solid rgba(239,68,68,.25);
-            color: #f87171;
+            background: rgba(239,68,68,.08);
+            border: 1px solid rgba(239,68,68,.3);
+            color: #dc2626;
             border-radius: 3px;
             padding: .9rem 1.2rem;
             margin-bottom: 1.5rem;
@@ -221,7 +221,7 @@
         /* ── ADMIN BUTTONS ── */
         .btn-admin-primary {
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--sidebar-bg);
+            color: #fff;
             border: none;
             border-radius: 3px;
             padding: .6rem 1.4rem;
@@ -237,7 +237,7 @@
         .btn-admin-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 18px rgba(201,168,76,.3);
-            color: var(--sidebar-bg);
+            color: #fff;
         }
 
         .btn-admin-outline {
@@ -259,8 +259,8 @@
 
         .btn-admin-danger {
             background: transparent;
-            color: #f87171;
-            border: 1px solid rgba(239,68,68,.35);
+            color: #dc2626;
+            border: 1px solid rgba(239,68,68,.4);
             border-radius: 3px;
             padding: .5rem 1.1rem;
             font-size: .75rem;
@@ -271,7 +271,7 @@
             transition: background .25s;
             display: inline-flex; align-items: center; gap: .4rem;
         }
-        .btn-admin-danger:hover { background: rgba(239,68,68,.1); color: #f87171; }
+        .btn-admin-danger:hover { background: rgba(239,68,68,.08); color: #dc2626; }
 
         /* ── TABLE ── */
         .admin-table-wrap {
@@ -282,8 +282,8 @@
         }
         .admin-table { width: 100%; border-collapse: collapse; }
         .admin-table thead tr {
-            background: rgba(201,168,76,.06);
-            border-bottom: 1px solid rgba(201,168,76,.12);
+            background: rgba(201,168,76,.07);
+            border-bottom: 1px solid rgba(201,168,76,.15);
         }
         .admin-table thead th {
             padding: 1rem 1.2rem;
@@ -303,10 +303,10 @@
         .admin-table td {
             padding: .95rem 1.2rem;
             font-size: .88rem;
-            color: rgba(240,236,227,.8);
+            color: rgba(30,34,53,.8);
             vertical-align: middle;
         }
-        .admin-table .td-title { color: var(--cream); font-weight: 500; }
+        .admin-table .td-title { color: #1e2235; font-weight: 500; }
         .admin-table .td-price { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1rem; }
 
         /* ── PAGE HEADER ── */
@@ -316,7 +316,7 @@
             padding-bottom: 1.2rem;
             border-bottom: 1px solid rgba(201,168,76,.1);
         }
-        .page-header h1 { font-size: 1.8rem; color: var(--cream); }
+        .page-header h1 { font-size: 1.8rem; color: #1e2235; }
 
         /* ── FORM STYLES ── */
         .admin-form-card {
@@ -338,9 +338,9 @@
             font-weight: 600;
         }
         .admin-input {
-            background: rgba(7,9,15,.7);
-            border: 1px solid rgba(201,168,76,.18);
-            color: var(--cream);
+            background: #f8fafc;
+            border: 1px solid rgba(201,168,76,.2);
+            color: #1e2235;
             border-radius: 2px;
             padding: .75rem 1rem;
             width: 100%;
@@ -355,21 +355,21 @@
             box-shadow: 0 0 0 3px rgba(201,168,76,.1);
         }
         .admin-input.is-invalid { border-color: #ef4444; }
-        .admin-invalid-feedback { color: #f87171; font-size: .78rem; margin-top: .3rem; }
+        .admin-invalid-feedback { color: #dc2626; font-size: .78rem; margin-top: .3rem; }
 
         /* TomSelect override */
         .ts-wrapper .ts-control {
-            background: rgba(7,9,15,.7) !important;
-            border: 1px solid rgba(201,168,76,.18) !important;
-            color: var(--cream) !important;
+            background: #f8fafc !important;
+            border: 1px solid rgba(201,168,76,.2) !important;
+            color: #1e2235 !important;
             border-radius: 2px !important;
             min-height: 42px;
         }
         .ts-wrapper.focus .ts-control { border-color: var(--gold) !important; box-shadow: 0 0 0 3px rgba(201,168,76,.1) !important; }
-        .ts-dropdown { background: #101828 !important; border: 1px solid rgba(201,168,76,.2) !important; }
-        .ts-dropdown .option { color: rgba(240,236,227,.8) !important; padding: .5rem 1rem; }
-        .ts-dropdown .option:hover, .ts-dropdown .option.active { background: rgba(201,168,76,.12) !important; color: var(--cream) !important; }
-        .ts-wrapper .item { background: rgba(201,168,76,.15) !important; color: var(--gold) !important; border: 1px solid rgba(201,168,76,.3) !important; border-radius: 2px !important; }
+        .ts-dropdown { background: #ffffff !important; border: 1px solid rgba(201,168,76,.2) !important; }
+        .ts-dropdown .option { color: rgba(30,34,53,.8) !important; padding: .5rem 1rem; }
+        .ts-dropdown .option:hover, .ts-dropdown .option.active { background: rgba(201,168,76,.1) !important; color: #1e2235 !important; }
+        .ts-wrapper .item { background: rgba(201,168,76,.12) !important; color: var(--gold) !important; border: 1px solid rgba(201,168,76,.3) !important; border-radius: 2px !important; }
         .ts-wrapper .remove { color: var(--gold) !important; }
 
         /* Toggle switch */
@@ -377,10 +377,10 @@
 
         /* Pagination */
         .pagination .page-link {
-            background: var(--card-bg); border-color: var(--card-border); color: var(--cream);
+            background: #ffffff; border-color: rgba(201,168,76,.2); color: #1e2235;
         }
-        .pagination .page-link:hover { background: var(--gold); color: var(--sidebar-bg); border-color: var(--gold); }
-        .pagination .page-item.active .page-link { background: var(--gold); border-color: var(--gold); color: var(--sidebar-bg); }
+        .pagination .page-link:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
+        .pagination .page-item.active .page-link { background: var(--gold); border-color: var(--gold); color: #fff; }
 
         @media (max-width: 768px) {
             .admin-sidebar { display: none; }

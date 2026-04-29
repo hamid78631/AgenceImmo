@@ -9,7 +9,7 @@
         background:
             radial-gradient(ellipse at 65% 50%, rgba(201,168,76,.07) 0%, transparent 55%),
             radial-gradient(ellipse at 15% 80%, rgba(201,168,76,.05) 0%, transparent 50%),
-            linear-gradient(145deg, #07090f 0%, #0d1626 55%, #152035 100%);
+            linear-gradient(145deg, #ffffff 0%, #f8fafc 55%, #f0f4f8 100%);
         display: flex;
         align-items: center;
         position: relative;
@@ -18,8 +18,8 @@
     .hero-grid {
         position: absolute; inset: 0;
         background-image:
-            linear-gradient(rgba(201,168,76,.035) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(201,168,76,.035) 1px, transparent 1px);
+            linear-gradient(rgba(201,168,76,.07) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(201,168,76,.07) 1px, transparent 1px);
         background-size: 65px 65px;
         pointer-events: none;
     }
@@ -30,34 +30,34 @@
         width: 55vw; height: 55vw;
         max-width: 700px; max-height: 700px;
         border-radius: 50%;
-        border: 1px solid rgba(201,168,76,.07);
-        box-shadow: inset 0 0 80px rgba(201,168,76,.04);
+        border: 1px solid rgba(201,168,76,.14);
+        box-shadow: inset 0 0 80px rgba(201,168,76,.06);
         pointer-events: none;
     }
     .hero-ornament::after {
         content: '';
         position: absolute; inset: 40px;
         border-radius: 50%;
-        border: 1px solid rgba(201,168,76,.06);
+        border: 1px solid rgba(201,168,76,.1);
     }
 
     .hero h1 {
         font-size: clamp(2.6rem, 5.5vw, 5rem);
         line-height: 1.08;
         font-weight: 700;
-        color: var(--cream);
+        color: #1e2235;
         letter-spacing: -.5px;
     }
     .hero h1 em { font-style: italic; color: var(--gold); }
     .hero-desc {
-        color: rgba(240,236,227,.6);
+        color: rgba(30,34,53,.65);
         font-size: 1rem;
         line-height: 1.85;
         max-width: 500px;
     }
     .hero-badge-wrap { display: flex; flex-direction: column; gap: 1rem; }
     .hero-badge {
-        background: rgba(201,168,76,.07);
+        background: rgba(255,255,255,.75);
         border: 1px solid rgba(201,168,76,.2);
         border-radius: 3px;
         padding: 1.1rem 1.6rem;
@@ -65,6 +65,7 @@
         align-items: center;
         gap: 1.4rem;
         backdrop-filter: blur(8px);
+        box-shadow: 0 4px 20px rgba(0,0,0,.05);
     }
     .hb-num {
         font-family: 'Playfair Display', serif;
@@ -75,17 +76,17 @@
     }
     .hb-label {
         font-size: .7rem;
-        color: rgba(240,236,227,.55);
+        color: rgba(30,34,53,.55);
         text-transform: uppercase;
         letter-spacing: 1.2px;
     }
-    .hb-div { width: 1px; height: 36px; background: rgba(201,168,76,.25); flex-shrink: 0; }
+    .hb-div { width: 1px; height: 36px; background: rgba(201,168,76,.3); flex-shrink: 0; }
 
     /* ── STATS ── */
     .stats-bar {
-        background: #0a0e1a;
-        border-top: 1px solid rgba(201,168,76,.1);
-        border-bottom: 1px solid rgba(201,168,76,.1);
+        background: #ffffff;
+        border-top: 1px solid rgba(201,168,76,.12);
+        border-bottom: 1px solid rgba(201,168,76,.12);
         padding: 0;
     }
     .stat-col {
@@ -98,7 +99,7 @@
         position: absolute;
         right: 0; top: 20%; bottom: 20%;
         width: 1px;
-        background: rgba(201,168,76,.12);
+        background: rgba(201,168,76,.15);
     }
     .stat-col:last-child::after { display: none; }
     .stat-num {
@@ -122,9 +123,9 @@
     .latest-section { padding: 7rem 0; }
     .cta-section {
         padding: 6rem 0;
-        background: linear-gradient(135deg, rgba(201,168,76,.06), rgba(201,168,76,.02));
-        border-top: 1px solid rgba(201,168,76,.1);
-        border-bottom: 1px solid rgba(201,168,76,.1);
+        background: linear-gradient(135deg, rgba(201,168,76,.05), rgba(201,168,76,.02));
+        border-top: 1px solid rgba(201,168,76,.12);
+        border-bottom: 1px solid rgba(201,168,76,.12);
         text-align: center;
     }
     .cta-section h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); }
